@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Projet: SortingAlgorithm
@@ -13,6 +14,7 @@ import java.awt.event.ActionListener;
 public class Controller {
     private UserInterface theUI;
     private  SortingModel theModel;
+    private ArrayList<Integer> inputArray = new ArrayList<Integer>();
 
     /**
      * Constructor
@@ -32,17 +34,15 @@ public class Controller {
      */
     class SubmitListener implements ActionListener{
 
+
         @Override
         public void actionPerformed(ActionEvent e) {
-            int inputArray[] = new int[10];
-
+            int input;
             try{
-                for (int i = 0; i < inputArray.length;i++){
-                    inputArray[i]=theUI.getInput(); // put each input number into an array
-                    theUI.setInputNumbers("");//clear textfield after entering a value
-                    theUI.setOutput(inputArray[i]); //display the numbers in output textfield
-                    theUI.displayErrorMessage("Successful");
-                }
+                input = theUI.getInput();
+                inputArray.add(input);// put each input number into an array
+                theUI.setInputNumbers("");//clear textfield after entering a value
+                theUI.setOutput(input); //display the numbers in output textfield
             }
             catch (NumberFormatException ex){ //if what the user enter is not integer
                 theUI.displayErrorMessage("You need to enter Integers");
@@ -50,10 +50,14 @@ public class Controller {
         }
     }
 
+    /**
+     * After click bubble button, the bubble sorting of thr number will be shown
+     */
     class BubbleListener implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
+           theModel.bubbleSort(inputArray);
 
         }
     }

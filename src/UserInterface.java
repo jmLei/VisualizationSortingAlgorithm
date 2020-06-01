@@ -9,12 +9,13 @@
  */
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class UserInterface extends JFrame{
 
      // The components in the JFrame
-    private JLabel inputLabel = new JLabel("Please enter the numbers you want sorted with maximum 10 numbers : ");
+    private JLabel inputLabel = new JLabel("Please enter the numbers you want sorted: ");
     private JLabel outputLabel = new JLabel("The input numbers: ");
     private JLabel algorithmLabel = new JLabel("Select  a sorting algorithm in the follow option: ");
     private JTextField inputNumbers = new JTextField(10);
@@ -34,34 +35,42 @@ public class UserInterface extends JFrame{
      * constructor
      */
     UserInterface(){
-        //
-        JPanel panel = new JPanel();
+        //create panels
+        JPanel panel1 = new JPanel();
+        JPanel panel2 = new JPanel();
 
         //set up the frame
         this.setTitle("Visualization of Sorting Algorithm");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(600,600);
-        //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-       // this.setUndecorated(true);
+
+
+        // to set the box layout for each panel
+        panel1.setLayout(new BoxLayout(panel1,BoxLayout.X_AXIS));
+        panel2.setLayout(new BoxLayout(panel2,BoxLayout.Y_AXIS));
+
 
         //put the components on the panel
-        panel.add(inputLabel);
-        panel.add(inputNumbers);
-        panel.add(submit);
-        panel.add(outputLabel);
-        panel.add(algorithmLabel);
-        panel.add(bubble);
-        panel.add(selection);
-        panel.add(insertion);
-        panel.add(shell);
-        panel.add(merge);
-        panel.add(quick);
-        panel.add(heap);
-        panel.add(counting);
-        panel.add(bucket);
-        panel.add(radix);
+        panel1.add(inputLabel);
+        panel1.add(inputNumbers);
+        panel1.add(submit);
+        panel2.add(outputLabel);
+        panel2.add(algorithmLabel);
+        panel2.add(bubble);
+        panel2.add(selection);
+        panel2.add(insertion);
+        panel2.add(shell);
+        panel2.add(merge);
+        panel2.add(quick);
+        panel2.add(heap);
+        panel2.add(counting);
+        panel2.add(bucket);
+        panel2.add(radix);
 
-        this.add(panel); //put the panel on the JFrame
+        //put the panels on the JFrame
+        this.add(panel1,BorderLayout.NORTH);
+        this.add(panel2,BorderLayout.CENTER);
+
     }
 
     /**
