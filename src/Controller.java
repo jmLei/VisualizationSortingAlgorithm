@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Controller {
     private UserInterface theUI;
     private  SortingModel theModel;
-    private ArrayList<Integer> inputArray = new ArrayList<Integer>();
+    private SortingView theView;private ArrayList<Integer> inputArray = new ArrayList<Integer>();
 
     /**
      * Constructor
@@ -58,7 +58,6 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
            theModel.bubbleSort(inputArray);
-
         }
     }
 }

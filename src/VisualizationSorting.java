@@ -10,6 +10,7 @@ public class VisualizationSorting {
         SortingModel theModel = new SortingModel();
         UserInterface theUI = new UserInterface();
         Controller theController = new Controller(theUI,theModel);
+        SortingView theView = new SortingView(theModel,theController);
 
         theUI.setVisible(true);
     }

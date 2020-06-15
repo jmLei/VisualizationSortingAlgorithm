@@ -40,7 +40,7 @@ public class UserInterface extends JFrame{
         JPanel panel2 = new JPanel();
 
         //set up the frame
-        this.setTitle("Visualization of Sorting Algorithm");
+        this.setTitle("Sorting Algorithm");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(600,600);
 
