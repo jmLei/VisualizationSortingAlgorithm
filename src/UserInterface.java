@@ -14,7 +14,10 @@ import java.awt.event.ActionListener;
 
 public class UserInterface extends JFrame{
 
-     // The components in the JFrame
+    private static final int WIN_WIDTH =1500;
+    private static final int WIN_HEIGHT =700;
+
+    // The components in the JFrame
     private JLabel inputLabel = new JLabel("Please enter the numbers you want sorted: ");
     private JLabel outputLabel = new JLabel("The input numbers: ");
     private JLabel algorithmLabel = new JLabel("Select  a sorting algorithm in the follow option: ");
@@ -42,7 +45,7 @@ public class UserInterface extends JFrame{
         //set up the frame
         this.setTitle("Sorting Algorithm");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600,600);
+        this.setSize(WIN_WIDTH,WIN_HEIGHT);
 
 
         // to set the box layout for each panel

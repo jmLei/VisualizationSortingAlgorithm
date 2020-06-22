@@ -1,5 +1,8 @@
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Projet: SortingAlgorithm
@@ -11,12 +14,19 @@ import java.util.ArrayList;
  * Date:
  */
 
-public class SortingModel implements SortingModelInterface {
+public class SortingModel extends JFrame implements SortingModelInterface {
     private ArrayList<ArrayObserver> ArrayObservers;
     private ArrayList<Integer> sortingArray;
-    private Color color = Color.black;
+    private static final long sleepTime = 1000;
+    private SortingView theView ;
+    private static final int WIN_WIDTH =1500;
+    private static final int WIN_HEIGHT =700;
 
     public SortingModel(){
+        //set up the frame
+        this.setTitle("Visualization of Sorting Algorithm");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(WIN_WIDTH,WIN_HEIGHT);
         ArrayObservers = new ArrayList<ArrayObserver>();
     }
 
@@ -41,27 +51,40 @@ public class SortingModel implements SortingModelInterface {
     }
 
     public void bubbleSort(ArrayList<Integer> inputArray){
+        this.setVisible(true);
         sortingArray = inputArray;
-
-        int temp; //temporary number
+        theView = new SortingView(sortingArray);
+        this.add(theView);
+        theView.repaint();
 
         //Check the adjacent numbers, if the second number is greater than the first number,
         //then exchange their position. Repeat until the sorting end
-        for (int i = 0; i< sortingArray.size()-1; i++){
-            for(int j = 0; j< sortingArray.size()-1-i; j++){
-                if(sortingArray.get(j)> sortingArray.get(j+1)){
-                    temp = sortingArray.get(j+1);
-                    sortingArray.set(j+1, sortingArray.get(j));
-                    sortingArray.set(j,temp);
+        for (int i = 0; i< sortingArray.size()-1; i++)
+            for (int j = 0; j < sortingArray.size() - 1 - i; j++) {
+                if (sortingArray.get(j) > sortingArray.get(j + 1)) {
+                    Collections.swap(sortingArray, j, j + 1);
                 }
-                setSortingArray(sortingArray);
+                System.out.println("The array in model" + " is: " + sortingArray);
+                theView.setSortingArray(sortingArray);
+                theView.repaint();
+                setSleepTime(sleepTime);
+                //setSortingArray(sortingArray);
+
             }
-        }
     }
+
 
     public void setSortingArray(ArrayList<Integer> sortingArray){
        this.sortingArray = sortingArray;
-        notifyObserver();
+       notifyObserver();
     }
 
+    public void setSleepTime(long sleepTime){
+        final long startTime = System.currentTimeMillis();
+        long endTime, timeTaken;
+        do{
+            endTime = System.currentTimeMillis();
+            timeTaken = endTime-startTime;
+        }while(timeTaken<sleepTime);
+    }
 }

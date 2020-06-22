@@ -29,6 +29,14 @@ public class Controller {
         this.theUI.bubbleListener(new BubbleListener());
     }
 
+    public void setSleepTime(long sleepTime){
+        final long startTime = System.currentTimeMillis();
+        long endTime, timeTaken;
+        do{
+            endTime = System.currentTimeMillis();
+            timeTaken = endTime-startTime;
+        }while(timeTaken<sleepTime);
+    }
     /**
      * After click submit button, the entered number will be shown
      */
