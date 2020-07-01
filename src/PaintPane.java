@@ -2,15 +2,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class PaintPane extends JPanel {
-    private final ArrayList<Integer> sortingArray;
+public class PaintPane extends JPanel implements Runnable {
+    private ArrayList<Integer> sortingArray;
     private static final int BAR_WIDTH =10;
+    private boolean sorted = false;
 
     public PaintPane(ArrayList<Integer> sortingArray) {
         setBackground(Color.BLACK);
         this.sortingArray = sortingArray;
         System.out.println("Drawing!!!!!");
         System.out.println("The drawing array is: " + this.sortingArray);
+
     }
 
     public void paintComponent(Graphics g) {
@@ -29,12 +31,26 @@ public class PaintPane extends JPanel {
             for (int i = 0; i < sortingArray.size(); i++) {
                 int value = sortingArray.get(i); //the value for each bar
                 int height = ((getHeight() - 30) * value / max);
-                g.setColor(Color.white);
-                g.fillRect(i * (BAR_WIDTH + 2), getHeight() - height, BAR_WIDTH, height);
+                graphics.setColor(Color.white);
+                graphics.fillRect(i * (BAR_WIDTH + 2), getHeight() - height, BAR_WIDTH, height);
             }
         } catch (ArithmeticException ex) {
             JOptionPane.showMessageDialog(this, "There is no sorted array.");
         }
 
+    }
+
+    @Override
+    public void run() {
+        while (!sorted){
+            System.out.println("running ");
+            repaint();
+            try{
+                Thread.sleep(7000);
+            }catch(InterruptedException e){
+                e.printStackTrace();
+            }
+
+        }
     }
 }

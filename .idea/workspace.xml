@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7ec28f2-ed06-4a09-8c05-c533e304dc56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaintPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RTSGame/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RTSGame/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RTSGame/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RTSGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/RTSGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../RTSGame/RTSGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/out/production/RTSGame/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RTSGame/src/Map.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/BarCharts/SortingView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/BarCharts/SortingView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller$BubbleListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller$BubbleListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller$SubmitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller$SubmitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/PaintPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/PaintPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/SortingModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/SortingModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/SortingView$PaintPane.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/SortingView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/SortingView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/UserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/UserInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SortingAlgorithm/VisualizationSorting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SortingAlgorithm/VisualizationSorting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BarCharts/SortingView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaintPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaintPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SortingModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SortingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VisualizationSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisualizationSorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudyApp" beforeDir="false" afterPath="$PROJECT_DIR$/../StudyApp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,10 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SortingModelInterface.java">
+        <entry file="file://$PROJECT_DIR$/src/VisualizationSorting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="92">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -45,28 +39,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArrayObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" selection-start-column="27" selection-end-column="27" />
+            <state relative-caret-position="34">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VisualizationSorting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SortingModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+            <state relative-caret-position="170">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,34 +62,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SortingView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+            <state relative-caret-position="126">
+              <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2477#2478#0" expanded="true" />
-                <element signature="e#2511#2512#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PaintPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="38" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="272">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41">
+            <state relative-caret-position="1088">
               <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -146,10 +119,10 @@
         <option value="$PROJECT_DIR$/src/Sleep.java" />
         <option value="$PROJECT_DIR$/src/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
-        <option value="$PROJECT_DIR$/src/PaintPane.java" />
         <option value="$PROJECT_DIR$/src/VisualizationSorting.java" />
-        <option value="$PROJECT_DIR$/src/SortingModel.java" />
         <option value="$PROJECT_DIR$/src/SortingView.java" />
+        <option value="$PROJECT_DIR$/src/SortingModel.java" />
+        <option value="$PROJECT_DIR$/src/PaintPane.java" />
       </list>
     </option>
   </component>
@@ -164,8 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,8 +168,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="147" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592821638275" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JFreechart/jfreechart-1.0.19/lib/jfreechart-1.0.19.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593586425766" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -242,9 +215,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29959515" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31578946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -253,7 +225,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -294,20 +266,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BarCharts/SortingView.java" />
     <entry file="file://$PROJECT_DIR$/src/Sleep.java" />
-    <entry file="file://$PROJECT_DIR$/src/SortingModelInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../JDK/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -317,7 +275,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
+        <state relative-caret-position="1088">
           <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -326,20 +284,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PaintPane.java">
+    <entry file="file://$PROJECT_DIR$/src/SortingModelInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="38" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/ArrayObserver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -348,27 +320,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VisualizationSorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SortingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2477#2478#0" expanded="true" />
-            <element signature="e#2511#2512#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="92">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SortingModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="68" column="16" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PaintPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

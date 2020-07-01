@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -14,19 +12,15 @@ import java.util.Collections;
  * Date:
  */
 
-public class SortingModel extends JFrame implements SortingModelInterface {
+public class SortingModel implements SortingModelInterface {
     private ArrayList<ArrayObserver> ArrayObservers;
     private ArrayList<Integer> sortingArray;
     private static final long sleepTime = 1000;
     private SortingView theView ;
-    private static final int WIN_WIDTH =1500;
-    private static final int WIN_HEIGHT =700;
+
+
 
     public SortingModel(){
-        //set up the frame
-        this.setTitle("Visualization of Sorting Algorithm");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(WIN_WIDTH,WIN_HEIGHT);
         ArrayObservers = new ArrayList<ArrayObserver>();
     }
 
@@ -45,18 +39,15 @@ public class SortingModel extends JFrame implements SortingModelInterface {
 
     @Override
     public void notifyObserver() {
+        System.out.println("2 ");
         for(ArrayObserver observer: ArrayObservers){
             observer.update(sortingArray);
         }
     }
 
     public void bubbleSort(ArrayList<Integer> inputArray){
-        this.setVisible(true);
         sortingArray = inputArray;
-        theView = new SortingView(sortingArray);
-        this.add(theView);
-        theView.repaint();
-
+        theView = new SortingView(sortingArray,this);
         //Check the adjacent numbers, if the second number is greater than the first number,
         //then exchange their position. Repeat until the sorting end
         for (int i = 0; i< sortingArray.size()-1; i++)
@@ -65,10 +56,8 @@ public class SortingModel extends JFrame implements SortingModelInterface {
                     Collections.swap(sortingArray, j, j + 1);
                 }
                 System.out.println("The array in model" + " is: " + sortingArray);
-                theView.setSortingArray(sortingArray);
-                theView.repaint();
-                setSleepTime(sleepTime);
-                //setSortingArray(sortingArray);
+                setSortingArray(sortingArray);
+                //setSleepTime(sleepTime);
 
             }
     }
@@ -76,6 +65,7 @@ public class SortingModel extends JFrame implements SortingModelInterface {
 
     public void setSortingArray(ArrayList<Integer> sortingArray){
        this.sortingArray = sortingArray;
+        System.out.println("1 ");
        notifyObserver();
     }
 
