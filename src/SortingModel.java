@@ -1,9 +1,11 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
 /**
- * Projet: SortingAlgorithm
+ * Projet: SortingAlgorithmInterface
  * Class: SortigModel
  * Description: The Model contains only the pure application data,
  *              it contains no logic describing how to present the data to a user.
@@ -12,69 +14,47 @@ import java.util.Collections;
  * Date:
  */
 
-public class SortingModel implements SortingModelInterface {
-    private ArrayList<ArrayObserver> ArrayObservers;
+public class SortingModel  {
     private ArrayList<Integer> sortingArray;
-    private static final long sleepTime = 1000;
-    private SortingView theView ;
+    private SortingView theView;
+    private static final long sleepTime = 2000;
 
-
-
-    public SortingModel(){
-        ArrayObservers = new ArrayList<ArrayObserver>();
-    }
-
-    @Override
-    public void registerObserver(ArrayObserver newObserver) {
-        ArrayObservers.add(newObserver);
-        System.out.println("Create observer.");
-    }
-
-    @Override
-    public void removeObserver(ArrayObserver deleteObserver) {
-        int index = ArrayObservers.indexOf(deleteObserver);
-        ArrayObservers.remove(index);
-        System.out.println("Delete observer.");
-    }
-
-    @Override
-    public void notifyObserver() {
-        System.out.println("2 ");
-        for(ArrayObserver observer: ArrayObservers){
-            observer.update(sortingArray);
-        }
-    }
 
     public void bubbleSort(ArrayList<Integer> inputArray){
         sortingArray = inputArray;
-        theView = new SortingView(sortingArray,this);
-        //Check the adjacent numbers, if the second number is greater than the first number,
-        //then exchange their position. Repeat until the sorting end
-        for (int i = 0; i< sortingArray.size()-1; i++)
-            for (int j = 0; j < sortingArray.size() - 1 - i; j++) {
-                if (sortingArray.get(j) > sortingArray.get(j + 1)) {
-                    Collections.swap(sortingArray, j, j + 1);
+        theView = new SortingView(sortingArray);
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                for(int value : sortingArray){
+                    theView.setBars(Color.white,value);
                 }
-                System.out.println("The array in model" + " is: " + sortingArray);
-                setSortingArray(sortingArray);
-                //setSleepTime(sleepTime);
-
+                //Check the adjacent numbers, if the second number is greater than the first number,
+                //then exchange their position. Repeat until the sorting end
+                for (int i = 0; i< sortingArray.size()-1; i++) {
+                    for (int j = 0; j < sortingArray.size() - 1 - i; j++) {
+                        theView.setBars(Color.RED,sortingArray.get(j));
+                        theView.setBars(Color.GRAY,sortingArray.get(j+1));
+                        if (sortingArray.get(j) > sortingArray.get(j + 1)) {
+                            Collections.swap(sortingArray, j, j + 1);
+                        }
+                        theView.renew();
+                        try {
+                            Thread.sleep(sleepTime);
+                        } catch (InterruptedException ex) {
+                            Thread.currentThread().interrupt();
+                        }
+                        theView.setBars(Color.WHITE,sortingArray.get(j));
+                        theView.setBars(Color.WHITE,sortingArray.get(j+1));
+                    }
+                }
+                theView.renew();
             }
+        };
+        new Thread(runnable).start();
     }
 
 
-    public void setSortingArray(ArrayList<Integer> sortingArray){
-       this.sortingArray = sortingArray;
-        System.out.println("1 ");
-       notifyObserver();
-    }
 
-    public void setSleepTime(long sleepTime){
-        final long startTime = System.currentTimeMillis();
-        long endTime, timeTaken;
-        do{
-            endTime = System.currentTimeMillis();
-            timeTaken = endTime-startTime;
-        }while(timeTaken<sleepTime);
-    }
 }

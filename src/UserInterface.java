@@ -1,5 +1,5 @@
 /**
- * Projet: SortingAlgorithm
+ * Projet: SortingAlgorithmInterface
  * Class: UserInterface
  * Description: The View presents the model’s data to the user. The view knows how to access
  *            the model’s data, but it does not know what this data means or what the user

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-public class PaintPane extends JPanel implements Runnable {
+public class PaintPane extends JPanel  {
     private ArrayList<Integer> sortingArray;
     private static final int BAR_WIDTH =10;
     private boolean sorted = false;
@@ -10,10 +10,12 @@ public class PaintPane extends JPanel implements Runnable {
     public PaintPane(ArrayList<Integer> sortingArray) {
         setBackground(Color.BLACK);
         this.sortingArray = sortingArray;
+        repaint();
         System.out.println("Drawing!!!!!");
         System.out.println("The drawing array is: " + this.sortingArray);
 
     }
+
 
     public void paintComponent(Graphics g) {
         Graphics2D graphics = (Graphics2D) g;
@@ -40,17 +42,5 @@ public class PaintPane extends JPanel implements Runnable {
 
     }
 
-    @Override
-    public void run() {
-        while (!sorted){
-            System.out.println("running ");
-            repaint();
-            try{
-                Thread.sleep(7000);
-            }catch(InterruptedException e){
-                e.printStackTrace();
-            }
 
-        }
-    }
 }

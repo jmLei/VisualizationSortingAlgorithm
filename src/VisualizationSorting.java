@@ -1,5 +1,5 @@
 /**
- * Projet: SortingAlgorithm
+ * Projet: SortingAlgorithmInterface
  * Class: VisualizationSorting
  * Description: This class contains the main method and run the program
  * Author: Jiemei Lei

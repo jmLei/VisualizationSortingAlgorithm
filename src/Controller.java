@@ -3,7 +3,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
- * Projet: SortingAlgorithm
+ * Projet: SortingAlgorithmInterface
  * Class: Controller
  * Description: The Controller exists between the view and the model. It listens to events triggered
  *            by the view and executes the appropriate reaction to these events.
@@ -14,7 +14,8 @@ import java.util.ArrayList;
 public class Controller {
     private UserInterface theUI;
     private  SortingModel theModel;
-    private SortingView theView;private ArrayList<Integer> inputArray = new ArrayList<Integer>();
+    private SortingView theView;
+    private ArrayList<Integer> inputArray = new ArrayList<Integer>();
 
     /**
      * Constructor
@@ -29,14 +30,6 @@ public class Controller {
         this.theUI.bubbleListener(new BubbleListener());
     }
 
-    public void setSleepTime(long sleepTime){
-        final long startTime = System.currentTimeMillis();
-        long endTime, timeTaken;
-        do{
-            endTime = System.currentTimeMillis();
-            timeTaken = endTime-startTime;
-        }while(timeTaken<sleepTime);
-    }
     /**
      * After click submit button, the entered number will be shown
      */
