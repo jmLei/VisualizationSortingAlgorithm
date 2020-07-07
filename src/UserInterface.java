@@ -14,14 +14,14 @@ import java.awt.event.ActionListener;
 
 public class UserInterface extends JFrame{
 
-    private static final int WIN_WIDTH =1500;
-    private static final int WIN_HEIGHT =700;
+    private static final int WIN_WIDTH =1400;
+    private static final int WIN_HEIGHT =680;
 
     // The components in the JFrame
     private JLabel inputLabel = new JLabel("Please enter the numbers you want sorted: ");
     private JLabel outputLabel = new JLabel("The input numbers: ");
     private JLabel algorithmLabel = new JLabel("Select  a sorting algorithm in the follow option: ");
-    private JTextField inputNumbers = new JTextField(10);
+    private JTextField inputNumbers = new JTextField();
     private JButton submit = new JButton("submit");
     private JButton bubble = new JButton("Bubble Sort");
     private JButton selection = new JButton("Selection Sort");
@@ -39,8 +39,9 @@ public class UserInterface extends JFrame{
      */
     UserInterface(){
         //create panels
-        JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
+        JPanel inputPanel = new JPanel();
+        JPanel outputPanel = new JPanel(new GridLayout(2,1));
+        JPanel buttonPanel = new JPanel(new GridLayout(2,5));
 
         //set up the frame
         this.setTitle("Sorting Algorithm");
@@ -48,31 +49,38 @@ public class UserInterface extends JFrame{
         this.setSize(WIN_WIDTH,WIN_HEIGHT);
 
 
-        // to set the box layout for each panel
-        panel1.setLayout(new BoxLayout(panel1,BoxLayout.X_AXIS));
-        panel2.setLayout(new BoxLayout(panel2,BoxLayout.Y_AXIS));
+        // to set the box layout for input panel
+        inputPanel.setLayout(new BoxLayout(inputPanel,BoxLayout.X_AXIS));
+
+
+        //Define components
+        inputPanel.setPreferredSize(new Dimension(1400,30));
+        outputPanel.setPreferredSize(new Dimension(1400,150));
+        buttonPanel.setPreferredSize(new Dimension(1400,500));
+        inputNumbers.setFont(new Font("Serif",Font.BOLD,15));
 
 
         //put the components on the panel
-        panel1.add(inputLabel);
-        panel1.add(inputNumbers);
-        panel1.add(submit);
-        panel2.add(outputLabel);
-        panel2.add(algorithmLabel);
-        panel2.add(bubble);
-        panel2.add(selection);
-        panel2.add(insertion);
-        panel2.add(shell);
-        panel2.add(merge);
-        panel2.add(quick);
-        panel2.add(heap);
-        panel2.add(counting);
-        panel2.add(bucket);
-        panel2.add(radix);
+        inputPanel.add(inputLabel);
+        inputPanel.add(inputNumbers);
+        inputPanel.add(submit);
+        outputPanel.add(outputLabel);
+        outputPanel.add(algorithmLabel);
+        buttonPanel.add(bubble);
+        buttonPanel.add(selection);
+        buttonPanel.add(insertion);
+        buttonPanel.add(shell);
+        buttonPanel.add(merge);
+        buttonPanel.add(quick);
+        buttonPanel.add(heap);
+        buttonPanel.add(counting);
+        buttonPanel.add(bucket);
+        buttonPanel.add(radix);
 
         //put the panels on the JFrame
-        this.add(panel1,BorderLayout.NORTH);
-        this.add(panel2,BorderLayout.CENTER);
+        this.add(inputPanel,BorderLayout.NORTH);
+        this.add(outputPanel,BorderLayout.CENTER);
+        this.add(buttonPanel,BorderLayout.SOUTH);
 
     }
 

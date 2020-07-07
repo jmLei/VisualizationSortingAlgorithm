@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class Controller {
     private UserInterface theUI;
     private  SortingModel theModel;
-    private SortingView theView;
     private ArrayList<Integer> inputArray = new ArrayList<Integer>();
 
     /**
@@ -28,14 +27,13 @@ public class Controller {
 
         this.theUI.submitListener(new SubmitListener());
         this.theUI.bubbleListener(new BubbleListener());
+        this.theUI.selectionListener(new SelectionListener());
     }
 
     /**
      * After click submit button, the entered number will be shown
      */
     class SubmitListener implements ActionListener{
-
-
         @Override
         public void actionPerformed(ActionEvent e) {
             int input;
@@ -59,6 +57,14 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
            theModel.bubbleSort(inputArray);
+        }
+    }
+
+    class SelectionListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            theModel.selectionSort(inputArray);
         }
     }
 }
