@@ -17,8 +17,11 @@ public class SortingModel  {
     private SortingView theView;
     private static final long sleepTime = 500;
 
-
+    public void clearArray(){
+        sortingArray.clear();
+    }
     public void bubbleSort(ArrayList<Integer> inputArray){
+        System.out.println("Bubble array "+ sortingArray);
         sortingArray = inputArray;
         int size = sortingArray.size();
         theView = new SortingView(sortingArray);
@@ -26,9 +29,11 @@ public class SortingModel  {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
+                //initialized bars
                 for(int value : sortingArray){
                     theView.setBars(Color.white,value);
                 }
+
                 //Check the adjacent numbers, if the second number is greater than the first number,
                 //then exchange their position. Repeat until the sorting end
                 for (int i = 0; i< size-1; i++) {
@@ -61,22 +66,26 @@ public class SortingModel  {
             }
         };
         new Thread(runnable).start();
+        System.out.println("After Bubble array "+ sortingArray);
     }
 
     public void selectionSort(ArrayList<Integer> inputArray){
+        System.out.println("selection array "+ sortingArray);
         sortingArray = inputArray;
         int size = sortingArray.size();
-
-
         theView = new SortingView(sortingArray);
 
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 int temp, minIndex, tempIndex;
+
+                //initialized bars
                 for(int value : sortingArray){
                     theView.setBars(Color.white,value);
                 }
+
+                //selection sort
                 for (int i = 0; i< size-1; i++) {
                     minIndex =i;
                     theView.setBars(Color.RED,sortingArray.get(i));
@@ -126,4 +135,27 @@ public class SortingModel  {
         new Thread(runnable).start();
     }
 
+    public void insertionSort(ArrayList<Integer> inputArray) {
+        //inputArray = inputArray;
+        int size = inputArray.size();
+        theView = new SortingView(inputArray);
+
+        Runnable runnable = new Runnable(){
+
+            @Override
+            public void run() {
+                //initialized bars
+                for(int value : inputArray){
+                    theView.setBars(Color.white,value);
+                }
+
+                //selection sort
+                for (int i = 0; i< size-1; i++){
+
+                }
+
+            }
+        };
+        new Thread(runnable).start();
+    }
 }

@@ -29,7 +29,6 @@ public class SortingView extends JPanel {
         //set up the frame
         frame = new JFrame();
         frame.setTitle("Visualization of Sorting Algorithm");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(WIN_WIDTH,WIN_HEIGHT);
         frame.setVisible(true);
         frame.getContentPane().add(this);

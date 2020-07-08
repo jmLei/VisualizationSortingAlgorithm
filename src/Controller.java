@@ -26,8 +26,10 @@ public class Controller {
         this.theModel = theModel;
 
         this.theUI.submitListener(new SubmitListener());
+        this.theUI.clearListener(new ClearListener());
         this.theUI.bubbleListener(new BubbleListener());
         this.theUI.selectionListener(new SelectionListener());
+        this.theUI.insertioneListener(new InsertionListener());
     }
 
     /**
@@ -49,14 +51,22 @@ public class Controller {
         }
     }
 
+    class ClearListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            theUI.clearOutput();
+            theModel.clearArray();
+        }
+    }
     /**
      * After click bubble button, the bubble sorting of thr number will be shown
      */
     class BubbleListener implements ActionListener{
-
         @Override
         public void actionPerformed(ActionEvent e) {
-           theModel.bubbleSort(inputArray);
+            System.out.println("Controller Bubble array "+ inputArray);
+            theModel.bubbleSort(inputArray);
+            System.out.println("After Controller Bubble array "+ inputArray);
         }
     }
 
@@ -64,7 +74,17 @@ public class Controller {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            System.out.println("Controller selection array "+ inputArray);
             theModel.selectionSort(inputArray);
+
+        }
+    }
+
+    class InsertionListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            theModel.insertionSort(inputArray);
         }
     }
 }
