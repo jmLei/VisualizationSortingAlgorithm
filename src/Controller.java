@@ -48,6 +48,7 @@ public class Controller {
             catch (NumberFormatException ex){ //if what the user enter is not integer
                 theUI.displayErrorMessage("You need to enter Integers");
             }
+            theModel.setSortingArray(inputArray);
         }
     }
 
@@ -65,7 +66,7 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("Controller Bubble array "+ inputArray);
-            theModel.bubbleSort(inputArray);
+            theModel.bubbleSort();
             System.out.println("After Controller Bubble array "+ inputArray);
         }
     }
@@ -75,7 +76,7 @@ public class Controller {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("Controller selection array "+ inputArray);
-            theModel.selectionSort(inputArray);
+            theModel.selectionSort();
 
         }
     }
@@ -84,7 +85,7 @@ public class Controller {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            theModel.insertionSort(inputArray);
+            theModel.insertionSort();
         }
     }
 }

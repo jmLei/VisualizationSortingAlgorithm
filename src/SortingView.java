@@ -19,12 +19,16 @@ public class SortingView extends JPanel {
     private Color color;
     private HashMap<Integer,Color> bars = new HashMap<>();
     private JFrame frame;
+    private JLabel signal = new JLabel("");
     private static final int WIN_WIDTH =1500;
     private static final int WIN_HEIGHT =700;
 
     public SortingView(ArrayList<Integer> sortedArray){
         sortingArray=sortedArray;
         setBackground(Color.BLACK);
+        for(int value : sortingArray){
+            setBars(Color.white,value);
+        }
 
         //set up the frame
         frame = new JFrame();
@@ -63,6 +67,7 @@ public class SortingView extends JPanel {
         }
 
     }
+
 
 }
 
